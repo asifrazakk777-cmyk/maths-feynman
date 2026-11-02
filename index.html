@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<meta name="theme-color" content="#070c18" id="meta-theme-color">
+<meta name="description" content="Maths Feynman Techniques — Grade 10 Sindh Board Mathematics. Understand it. Explain it simply. Master it completely.">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Maths Feynman">
+<title>Maths Feynman Techniques — Chapter 01: Sets</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+<div class="app" id="app">
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <button class="icon-btn is-hidden" id="btn-back" aria-label="Go back"><span data-ic="arrow-left"></span></button>
+    <div class="logo-mark" id="logo-mark" aria-hidden="true"><span data-ic="venn"></span></div>
+    <div class="topbar__title">
+      <span id="topbar-title">Maths Feynman</span>
+      <small id="topbar-subtitle">Chapter 01 · Sets</small>
+    </div>
+    <button class="icon-btn" id="btn-theme" aria-label="Toggle dark or light theme"><span id="theme-icon" data-ic="moon"></span></button>
+  </header>
+
+  <!-- gradient used by the progress rings -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="var(--accent)"></stop>
+        <stop offset="100%" stop-color="var(--accent-2)"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- ============ SCREEN: HOME ============ -->
+  <main class="screen" id="screen-home">
+    <section class="hero">
+      <span class="hero__mark" data-ic="venn" aria-hidden="true"></span>
+      <span class="eyebrow">Grade 10 · Sindh Board</span>
+      <h1 class="hero__title">Chapter 01 — Sets</h1>
+      <p class="hero__sub">Understand it. Explain it simply. Master it completely.</p>
+
+      <div class="hero__progress">
+        <div class="ring">
+          <svg viewBox="0 0 100 100" width="92" height="92" aria-hidden="true">
+            <circle class="ring-track" cx="50" cy="50" r="42"></circle>
+            <circle class="ring-fill" id="home-ring-fill" cx="50" cy="50" r="42" stroke="url(#ringGrad)" stroke-dasharray="264" stroke-dashoffset="264"></circle>
+          </svg>
+          <div class="ring__label">
+            <span class="ring__pct" id="home-ring-pct">0%</span>
+            <span class="ring__tick">learned</span>
+          </div>
+        </div>
+        <div class="stat-lines">
+          <div class="stat-line"><span class="stat-line__ic" data-ic="check-circle"></span><span><b id="home-topics-done">0</b> / <span id="home-topics-total">27</span> topics completed</span></div>
+          <div class="stat-line"><span class="stat-line__ic" data-ic="clipboard-check"></span><span id="home-quiz-row">Quiz not attempted yet</span></div>
+          <div class="stat-line" id="home-last-row" style="display:none;"><span class="stat-line__ic" data-ic="bookmark"></span><span>Last studied: <b id="home-last-topic">—</b></span></div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-block" data-nav="topicLearning" data-continue="1"><span data-ic="play"></span><span id="home-cta-label">Continue Learning</span></button>
+    </section>
+
+    <h2 class="section-title"><span data-ic="zap"></span>Quick actions</h2>
+    <div class="qa-grid" id="home-qa-grid"></div>
+
+    <button class="row-btn tone-green is-hidden" id="install-btn" style="margin-top:12px;">
+      <span class="badge-ic"><span data-ic="download"></span></span>
+      <span class="row-btn__text"><b>Install app</b><small>Add to your home screen — works offline</small></span>
+      <span class="row-btn__chev" data-ic="chevron-right"></span>
+    </button>
+
+    <button class="row-btn tone-blue" data-nav="chapterStart" style="margin-top:12px;">
+      <span class="badge-ic"><span data-ic="book-open"></span></span>
+      <span class="row-btn__text"><b>Chapter overview</b><small>What you will learn in Chapter 01</small></span>
+      <span class="row-btn__chev" data-ic="chevron-right"></span>
+    </button>
+  </main>
+
+  <!-- ============ SCREEN: CHAPTER START ============ -->
+  <main class="screen" id="screen-chapter-start">
+    <section class="hero">
+      <span class="hero__mark" data-ic="venn" aria-hidden="true"></span>
+      <span class="eyebrow">10th Grade Mathematics</span>
+      <h1 class="hero__title">Chapter 01 — Sets</h1>
+      <p class="hero__sub hero__sub--strong">Learn Sets, one idea at a time.</p>
+      <p class="lede">Simple explanations, Feynman-based learning, examples, formulas, visual learning and complete chapter assessment.</p>
+    </section>
+
+    <div class="stat-strip">
+      <div class="stat-pill"><span class="stat-pill__ic" data-ic="book-open"></span><div class="stat-pill__num" id="cs-topic-count">27</div><div class="stat-pill__lbl">Topics</div></div>
+      <div class="stat-pill"><span class="stat-pill__ic" data-ic="list-checks"></span><div class="stat-pill__num" id="cs-mcq-count">162</div><div class="stat-pill__lbl">MCQs</div></div>
+      <div class="stat-pill"><span class="stat-pill__ic" data-ic="pen"></span><div class="stat-pill__num" id="cs-final-count">5</div><div class="stat-pill__lbl">Final Qs</div></div>
+    </div>
+
+    <div class="row-list">
+      <button class="row-btn row-btn--primary tone-cyan" data-nav="topicLearning" data-continue="1">
+        <span class="badge-ic"><span data-ic="graduation"></span></span>
+        <span class="row-btn__text"><b>Start Learning</b><small>Opens the first incomplete topic</small></span>
+        <span class="row-btn__chev" data-ic="chevron-right"></span>
+      </button>
+      <button class="row-btn tone-blue" data-nav="topicList">
+        <span class="badge-ic"><span data-ic="list"></span></span>
+        <span class="row-btn__text"><b>Topic List</b><small>All 27 topics with search</small></span>
+        <span class="row-btn__chev" data-ic="chevron-right"></span>
+      </button>
+      <button class="row-btn tone-indigo" data-nav="formulaSheet">
+        <span class="badge-ic"><span data-ic="sigma"></span></span>
+        <span class="row-btn__text"><b>Formula Sheet</b><small>Every law and notation</small></span>
+        <span class="row-btn__chev" data-ic="chevron-right"></span>
+      </button>
+      <button class="row-btn tone-teal" data-nav="visualLearning">
+        <span class="badge-ic"><span data-ic="venn"></span></span>
+        <span class="row-btn__text"><b>Visual Learning</b><small>Diagrams that work offline</small></span>
+        <span class="row-btn__chev" data-ic="chevron-right"></span>
+      </button>
+      <button class="row-btn tone-amber" data-nav="mcqTest">
+        <span class="badge-ic"><span data-ic="clipboard-check"></span></span>
+        <span class="row-btn__text"><b>Chapter Quiz</b><small id="cs-quiz-sub">162 MCQs · 6 parts · one combined result</small></span>
+        <span class="row-btn__chev" data-ic="chevron-right"></span>
+      </button>
+    </div>
+  </main>
+
+  <!-- ============ SCREEN: TOPIC LIST ============ -->
+  <main class="screen" id="screen-topic-list">
+    <span class="eyebrow">Chapter 01 — Sets</span>
+    <h1 class="page-title">All Topics</h1>
+    <div class="search-bar">
+      <span class="search-bar__icon" data-ic="search"></span>
+      <input type="search" id="topic-search" placeholder="Search topics..." aria-label="Search topics">
+    </div>
+    <div class="pbar" style="margin-top:16px;"><div class="pbar__fill" id="tl-pbar-fill" style="width:0%"></div></div>
+    <div class="pbar-row"><span id="tl-pbar-text">0 / 27 completed</span><span id="tl-pbar-pct">0%</span></div>
+    <div class="topic-list" id="topic-list-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: TOPIC LEARNING ============ -->
+  <main class="screen" id="screen-topic-learning">
+    <div id="topic-learning-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: FORMULA SHEET ============ -->
+  <main class="screen" id="screen-formula-sheet">
+    <span class="eyebrow">Before the test</span>
+    <h1 class="page-title">Chapter 01 — Sets<br>Formula &amp; Laws</h1>
+    <p class="lede">Test se pehle har law revise karlo — notation ke saath short Hinglish explanation bhi hai.</p>
+    <div id="formula-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: VISUAL LEARNING ============ -->
+  <main class="screen" id="screen-visual-learning">
+    <span class="eyebrow">See it to believe it</span>
+    <h1 class="page-title">Visual Learning</h1>
+    <p class="lede">Ye diagrams offline bhi kaam karte hain — koi broken image nahi.</p>
+    <div id="visual-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: QUICK NOTES ============ -->
+  <main class="screen" id="screen-quick-notes">
+    <span class="eyebrow">Last-minute revision</span>
+    <h1 class="page-title">Quick Notes</h1>
+    <p class="lede">Exam se pehle ek nazar — saare key points ek jagah.</p>
+    <div id="quicknotes-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: MCQ TEST ============ -->
+  <main class="screen" id="screen-mcq-test">
+    <div id="mcq-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: MCQ RESULTS ============ -->
+  <main class="screen" id="screen-mcq-results">
+    <div id="results-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: MISTAKE ANALYSIS ============ -->
+  <main class="screen" id="screen-mistake-analysis">
+    <span class="eyebrow">Learn from this</span>
+    <h1 class="page-title">Mistake Analysis</h1>
+    <div id="mistake-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: DESCRIPTIVE QUESTIONS ============ -->
+  <main class="screen" id="screen-descriptive">
+    <span class="eyebrow">Chapter 01 — Descriptive Questions</span>
+    <h1 class="page-title">Five Questions</h1>
+    <p class="lede">Apne alfaaz mein likho, phir submit karke apna kaam model answer se compare karo.</p>
+    <div id="descriptive-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: DESCRIPTIVE RESULTS ============ -->
+  <main class="screen" id="screen-descriptive-results">
+    <span class="eyebrow">Self-assessment</span>
+    <h1 class="page-title">Final Evaluation</h1>
+    <div id="descresults-container"></div>
+  </main>
+
+  <!-- ============ SCREEN: CHAPTER COMPLETE ============ -->
+  <main class="screen" id="screen-chapter-complete">
+    <div class="perfect-banner tone-amber">
+      <span class="badge-ic badge-ic--lg"><span data-ic="flag"></span></span>
+      <h1 class="page-title">Chapter Learning Complete</h1>
+      <p class="lede">Aapne Chapter 01 — Sets ke saare 27 topics complete kar liye. Ab formula sheet revise karo, phir quiz do.</p>
+      <div class="stack" style="margin-top:20px;">
+        <button class="btn btn-primary btn-block" data-nav="formulaSheet"><span data-ic="sigma"></span><span>Revise Formula Sheet</span></button>
+        <button class="btn btn-secondary btn-block" data-nav="visualLearning"><span data-ic="venn"></span><span>Visual Learning</span></button>
+        <button class="btn btn-secondary btn-block" data-nav="mcqTest"><span data-ic="clipboard-check"></span><span>Start Chapter Quiz</span></button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ BOTTOM NAVIGATION ============ -->
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <button class="nav-item is-active" data-nav="home" data-tab="home"><span data-ic="home"></span><span>Home</span></button>
+    <button class="nav-item" data-nav="topicList" data-tab="learn"><span data-ic="book-open"></span><span>Learn</span></button>
+    <button class="nav-item" data-nav="formulaSheet" data-tab="formula"><span data-ic="sigma"></span><span>Formulas</span></button>
+    <button class="nav-item" data-nav="visualLearning" data-tab="visual"><span data-ic="venn"></span><span>Visuals</span></button>
+    <button class="nav-item" data-nav="mcqTest" data-tab="quiz"><span data-ic="clipboard-check"></span><span>Quiz</span></button>
+  </nav>
+
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Saved</div>
+
+<script src="script.js"></script>
+</body>
+</html>
